@@ -17,15 +17,14 @@
            <h4><%= advice.ratio(advice.id) %></h4>
          </div>
          <div >
-          <%= simple_form_for @advice, :html => {:role => 'form'} do |f| %>
-            <%= f.error_notification %>
+          <%= form_for @advice, :html => {:role => 'form'} do |f| %>
             <div class='form-group'>
               <%= f.hidden_field :url, :value => "#{advice.url}" %>
             </div>
             <div class='form-group'>
               <%= f.hidden_field :user_id, :value => "#{current_user.id}" %>
             </div>
-            <%= f.submit 'Add!', :class => 'btn btn-default add' %>
+            <%= f.submit 'Add!', :class => 'btn btn-primary' %>
           <% end %>
          </div>
         </div>

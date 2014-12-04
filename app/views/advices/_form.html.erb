@@ -1,6 +1,5 @@
 <div class="red-container">
-  <%= simple_form_for @advice, :html => {:role => 'form'} do |f| %>
-    <%= f.error_notification %>
+  <%= form_for @advice, :html => {:role => 'form'} do |f| %>
     <div class='form-group'>
       <%= f.label :url, 'url:' %>
       <%= f.text_field :url, :autofocus => true, :placeholder => 'enter url', input_html: { "data-tooltip" => true, :class => "has-tip", :title => "Bla bla bla" } %>

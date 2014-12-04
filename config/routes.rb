@@ -8,8 +8,7 @@ Rails.application.routes.draw do
   resources :users, :only => [:show] do
     resources :user_advices
   end
-  resources :advices#, only: [:index, :new, :create]
-  # resources :sessions
+  resources :advices, only: [:index, :new, :create]
 
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
